@@ -11,20 +11,28 @@ import { AxiosRequestConfig } from 'axios';
 @Injectable()
 export class RavePaymentService {
   constructor(
-    private readonly config?: Config,
-    private readonly http?: HttpService,
+    private readonly config: Config,
+    private readonly http: HttpService,
   ) {}
+
+  testEndpoint(): string {
+    return 'Rave Service Working';
+  }
+
+  generateTxRef(): string {
+    return `TX-${Date.now()}`;
+  }
 
   async chargeCard(cardDetails: RaveCardPaymentDTO): Promise<void> {
     const payload: RaveCardPayload = {
       PBFPubKey: this.config.PBFPubKey,
       currency: this.config.currency,
       country: this.config.country,
-      txRef:
-        this.config.txRef === null
-          ? () => `TX-${Date.now()}`
-          : this.config.txRef(),
-      redirect_url: `${this.config.hostURL}/verify`,
+      txRef: this.generateTxRef(),
+        // this.config.txRef === null
+        //   ? () => `TX-${Date.now()}`
+        //   : this.config.txRef(),
+      redirect_url: `${this.config.hostURL}/rave/verify`,
       ...cardDetails,
     };
 

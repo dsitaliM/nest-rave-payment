@@ -22,9 +22,9 @@ export interface Config {
 /**
  * Currencies supported by Rave.
  */
-export type Currency = '' | '';
+export type Currency = 'ZMW' | '';
 
 /**
  * Countries in which Rave Works
  */
-export type Country = '' | '';
+export type Country = 'ZM' | '';
