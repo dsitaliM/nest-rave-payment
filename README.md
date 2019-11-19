@@ -4,6 +4,8 @@ More documentation coming
 
 ### Usage
 
+In your Application Module, add the following.
+
 ```typescript
 RavePaymentModule.register({
   PBFPubKey: 'Your public key',
