@@ -30,9 +30,9 @@ export class RavePaymentService {
       country: this.config.country,
       txRef: `MC-${Date.now()}`,
       // txRef: this.generateTxRef(),
-        // this.config.txRef === null
-        //   ? () => `TX-${Date.now()}`
-        //   : this.config.txRef(),
+      // this.config.txRef === null
+      //   ? () => `TX-${Date.now()}`
+      //   : this.config.txRef(),
       redirect_url: `${this.config.hostURL}/rave/verify`,
       ...cardDetails,
     };
@@ -87,3 +87,7 @@ export class RavePaymentService {
       });
   }
 }
+
+// export class Rave {
+//   constructor(publicKey: string, secretKey)
+// }
