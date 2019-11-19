@@ -28,7 +28,8 @@ export class RavePaymentService {
       PBFPubKey: this.config.PBFPubKey,
       currency: this.config.currency,
       country: this.config.country,
-      txRef: this.generateTxRef(),
+      txRef: `MC-${Date.now()}`,
+      // txRef: this.generateTxRef(),
         // this.config.txRef === null
         //   ? () => `TX-${Date.now()}`
         //   : this.config.txRef(),

@@ -8,6 +8,7 @@ export interface Config {
   secretKey: string;
   chargeEndpoint: string;
   hostURL: string;
+  txRef?: string;
   /**
    * Function to generate unique transaction reference.
    *
@@ -16,15 +17,15 @@ export interface Config {
    * () => `TX-${Date.now()}`
    * ```
    */
-  txRef?: Function;
+  // txRef?: Function;
 }
 
 /**
  * Currencies supported by Rave.
  */
-export type Currency = 'ZMW' | '';
+export type Currency = 'ZMW' | 'NGN';
 
 /**
  * Countries in which Rave Works
  */
-export type Country = 'ZM' | '';
+export type Country = 'ZM' | 'NG';

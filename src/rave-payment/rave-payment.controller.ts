@@ -19,7 +19,6 @@ export class RavePaymentController {
         console.log(err);
         Logger.error(err, 'ChargeCard');
       });
-    // return this.raveService.testEndpoint();
   }
 
   @Post('charge-momo')
