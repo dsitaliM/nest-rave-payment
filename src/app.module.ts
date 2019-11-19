@@ -7,10 +7,10 @@ import { RavePaymentModule } from './rave-payment/rave-payment.module';
   imports: [
     RavePaymentModule.register(
       {
-        PBFPubKey: 'FLWPUBK_TEST-742eb5e0eef2888e1c12b0affecad047-X',
+        PBFPubKey: 'FLWPUBK-ba0a57153f497c03bf34a9e296aa9439-X',
         currency: 'NGN',
         country: 'NG',
-        secretKey: 'FLWSECK-fbc9cb514edca17e28cd3e59bb939aa4-X',
+        secretKey: 'FLWSECK-327b3874ca8e75640a1198a1b75c0b0b-X',
         chargeEndpoint: 'https://api.ravepay.co/flwv3-pug/getpaidx/api/charge',
         hostURL: 'http://localhost:3000',
       },

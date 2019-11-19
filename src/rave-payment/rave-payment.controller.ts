@@ -9,16 +9,17 @@ export class RavePaymentController {
 
   @Post('charge-card')
   async chargeCard(@Body() card: RaveCardPaymentDTO) {
-    return this.raveService
-      .chargeCard(card)
-      .then(data => {
-        console.log(data);
-        Logger.log(data, 'ChargeCard');
-      })
-      .catch(err => {
-        console.log(err);
-        Logger.error(err, 'ChargeCard');
-      });
+    return this.raveService.makePayment(card);
+    // return this.raveService
+    //   .chargeCard(card)
+    //   .then(data => {
+    //     console.log(data);
+    //     Logger.log(data, 'ChargeCard');
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //     Logger.error(err, 'ChargeCard');
+    //   });
   }
 
   @Post('charge-momo')

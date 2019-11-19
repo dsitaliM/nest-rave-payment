@@ -4,7 +4,7 @@ export class RaveCardPayload {
   /**
    * This is a unique key generated for each button created on Rave’s dashboard.
    */
-  PBFPubKey: string;
+  // PBFPubKey: string;
 
   /**
    * This is the specified currency to charge the card in
