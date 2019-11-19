@@ -1,6 +1,7 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, Get, Req } from '@nestjs/common';
 import { RaveCardPaymentDTO } from './dtos/rave-payload.dto';
 import { RavePaymentService } from './rave-payment.service';
+import { Request, Response } from 'express';
 
 @Controller('rave')
 export class RavePaymentController {
@@ -14,6 +15,10 @@ export class RavePaymentController {
   @Post('charge-momo')
   chargeMomo() {}
 
-  @Post('verify')
-  verifyPayment() {}
+  @Get('verify')
+  verifyPayment(@Req() response: Response) {
+    console.log('Verifying');
+    console.log(response);
+    response.render('Successfull');
+  }
 }

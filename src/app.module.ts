@@ -6,11 +6,11 @@ import { RavePaymentModule } from './rave-payment/rave-payment.module';
 @Module({
   imports: [
     RavePaymentModule.register({
-      PBFPubKey: 'FLWPUBK-ba0a57153f497c03bf34a9e296aa9439-X',
-      currency: 'NGN',
-      country: 'NG',
-      secretKey: 'FLWSECK-327b3874ca8e75640a1198a1b75c0b0b-X',
-      chargeEndpoint: 'https://api.ravepay.co/flwv3-pug/getpaidx/api/charge',
+      PBFPubKey: 'FLWPUBK_TEST-742eb5e0eef2888e1c12b0affecad047-X',
+      secretKey: 'FLWSECK_TEST-6a6ee87e483b1853764103b97f629315-X',
+      currency: 'ZMW',
+      country: 'ZM',
+      chargeEndpoint: 'https://ravesandbox.flutterwave.com/pay/2oqbbld980mr',
       hostURL: 'http://localhost:3000',
     }),
   ],

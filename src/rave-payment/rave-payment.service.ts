@@ -20,6 +20,7 @@ export class RavePaymentService {
       country: this.config.country,
       txRef: `MC-${Date.now()}`,
       redirect_url: `${this.config.hostURL}/rave/verify`,
+      // redirect_url: 'http://localhost:3000/rave/verify',
       ...cardDetails,
     };
 
@@ -65,8 +66,8 @@ export class Rave {
     return new Promise((resolve, reject) => {
       let encryptedCardDetails = this.encryptCardDetails(payload);
       let paymentOptions: RavePaymentOptions = {
-        url:
-          'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/charge',
+        // url: 'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/charge',
+        url: 'https://api.ravepay.co/flwv3-pug/getpaidx/api/charge',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
