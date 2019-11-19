@@ -30,6 +30,7 @@
     "md5": "^2.2.1",
     "node-forge": "^0.9.1",
     "reflect-metadata": "^0.1.13",
+    "request": "^2.88.0",
     "request-promise-native": "^1.0.8",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3"

@@ -68,6 +68,7 @@ export class Rave {
       let paymentOptions: RavePaymentOptions = {
         // url: 'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/charge',
         url: 'https://api.ravepay.co/flwv3-pug/getpaidx/api/charge',
+        // url: 'https://ravesandbox.flutterwave.com/pay/2oqbbld980mr',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
