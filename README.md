@@ -17,7 +17,7 @@ RavePaymentModule.register({
 });
 ```
 
-Then add an endpoint to your controller, e.g.
+Then add an endpoint to your controller, e.g:
 
 ```typescript
 constructor(private readonly raveService: RavePaymentService) {}
