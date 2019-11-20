@@ -9,7 +9,18 @@ export class RavePaymentController {
 
   @Post('charge-card')
   async chargeCard(@Body() card: RaveCardPaymentDTO) {
-    return this.raveService.makePayment(card);
+    let response: Object = {};
+    await this.raveService
+      .makePayment(card)
+      .then(res => {
+        response = res;
+      })
+      .catch(err => {
+        response = err;
+      });
+
+    console.log(response);
+    return response;
   }
 
   @Post('charge-momo')

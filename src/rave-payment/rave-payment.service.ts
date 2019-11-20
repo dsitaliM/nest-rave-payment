@@ -13,7 +13,7 @@ import { RavePaymentOptions } from './interfaces/payment-options';
 export class RavePaymentService {
   constructor(private readonly config: Config) {}
 
-  makePayment(cardDetails: RaveCardPaymentDTO) {
+  async makePayment(cardDetails: RaveCardPaymentDTO): Promise<any> {
     let rave = new Rave(this.config.PBFPubKey, this.config.secretKey);
     const payload: RaveCardPayload = {
       currency: this.config.currency,
@@ -24,10 +24,9 @@ export class RavePaymentService {
       ...cardDetails,
     };
 
-    rave
-      .initiatePayment(payload)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+    return rave.initiatePayment(payload);
+    // .then(res => console.log(res))
+    // .catch(err => console.log(err));
   }
 }
 
@@ -62,7 +61,7 @@ export class Rave {
     return secKeyAdjustedFirst12 + keymd5last12;
   }
 
-  public initiatePayment(payload: RaveCardPayload) {
+  public initiatePayment(payload: RaveCardPayload): Promise<any> {
     return new Promise((resolve, reject) => {
       let encryptedCardDetails = this.encryptCardDetails(payload);
       let paymentOptions: RavePaymentOptions = {
