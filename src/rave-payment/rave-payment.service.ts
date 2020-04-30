@@ -65,8 +65,9 @@ export class Rave {
     return new Promise((resolve, reject) => {
       let encryptedCardDetails = this.encryptCardDetails(payload);
       let paymentOptions: RavePaymentOptions = {
-        // url: 'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/charge',
-        url: 'https://api.ravepay.co/flwv3-pug/getpaidx/api/charge',
+        url:
+          'https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/charge',
+        // url: 'https://api.ravepay.co/flwv3-pug/getpaidx/api/charge',
         // url: 'https://ravesandbox.flutterwave.com/pay/2oqbbld980mr',
         method: 'POST',
         headers: {
