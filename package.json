@@ -28,7 +28,7 @@
     "@types/request-promise-native": "^1.0.17",
     "crypto": "^1.0.1",
     "md5": "^2.2.1",
-    "node-forge": "^0.9.1",
+    "node-forge": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.8",
